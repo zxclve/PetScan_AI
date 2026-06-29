@@ -227,7 +227,3 @@ docker-compose up -d --build
 - 안구 AI 세부 내용: [pet-ai-eye/README.md](pet-ai-eye/README.md)
 - 피부 AI 세부 내용: [pet-ai-skin/README.md](pet-ai-skin/README.md)
 - 인프라/배포 문서: [pet-infra/README.md](pet-infra/README.md)
-
-## 한 줄 정리
-
-PetScan_AI는 반려동물 질환 이미지를 AI로 분석하고, 인증·반려동물 관리·진단 이력·배포 인프라까지 하나의 저장소에서 함께 다루는 통합형 포트폴리오 프로젝트입니다.
