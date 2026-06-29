@@ -222,11 +222,11 @@ docker-compose up -d --build
 ## 추천 문서 흐름
 
 - 전체 구조 파악: [`README.md`](README.md)
-- 백엔드 세부 내용: [pet-backend/README.md](/C:/Users/한지원/Desktop/포트폴리오/PetScan_AI/pet-backend/README.md)
-- 프론트엔드 세부 내용: [pet-frontend/README.md](/C:/Users/한지원/Desktop/포트폴리오/PetScan_AI/pet-frontend/README.md)
-- 안구 AI 세부 내용: [pet-ai-eye/README.md](/C:/Users/한지원/Desktop/포트폴리오/PetScan_AI/pet-ai-eye/README.md)
-- 피부 AI 세부 내용: [pet-ai-skin/README.md](/C:/Users/한지원/Desktop/포트폴리오/PetScan_AI/pet-ai-skin/README.md)
-- 인프라/배포 문서: [pet-infra/README.md](/C:/Users/한지원/Desktop/포트폴리오/PetScan_AI/pet-infra/README.md)
+- 백엔드 세부 내용: [pet-backend/README.md](pet-backend/README.md)
+- 프론트엔드 세부 내용: [pet-frontend/README.md](pet-frontend/README.md)
+- 안구 AI 세부 내용: [pet-ai-eye/README.md](pet-ai-eye/README.md)
+- 피부 AI 세부 내용: [pet-ai-skin/README.md](pet-ai-skin/README.md)
+- 인프라/배포 문서: [pet-infra/README.md](pet-infra/README.md)
 
 ## 한 줄 정리
 
