@@ -1,0 +1,30 @@
+FROM python:3.10-slim
+
+WORKDIR /app
+
+# 시스템 의존성 설치
+RUN apt-get update && apt-get install -y \
+    git \
+    libgl1 \
+    libglib2.0-0 \
+    && rm -rf /var/lib/apt/lists/*
+
+# Python 의존성 복사 및 설치
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# YOLOv5 weights(best.pt)가 참조하는 `models.yolo` 모듈을 제공하기 위해
+# YOLOv5 레포를 소스 형태로 포함하고 PYTHONPATH에 추가
+RUN git clone --depth 1 https://github.com/ultralytics/yolov5.git /app/yolov5 \
+    && pip install --no-cache-dir -r /app/yolov5/requirements.txt
+ENV PYTHONPATH="/app/yolov5:${PYTHONPATH}"
+
+# 애플리케이션 코드 복사
+COPY app app
+COPY models models
+
+# 포트 노출
+EXPOSE 5000
+
+# FastAPI 실행
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "5000"]
